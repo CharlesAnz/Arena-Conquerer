@@ -140,15 +140,15 @@ public class TileMouseInput : MonoBehaviour, IMouseInput
 		attackButton = FindObjectOfType<AttackButton> ();
 
         if (!attacking && !hovering && !moving && !selected) meshRenderer.material = defaultMat;
-
+		
 		TileCheck ();
 		
-
+		
 		for(int i = 0; i < people.Count; i++)
 			{ if (people[i].currentState == CharacterState.TurnState.DEAD) people.Remove (people[i]); }
 		for(int i = 0; i < enemies.Count; i++)
 			{ if (enemies[i].currentState == EnemyState.TurnState.DEAD) enemies.Remove(enemies[i]); }
-
+			
 	}
 
 	void TileCheck ()
